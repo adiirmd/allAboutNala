@@ -1,0 +1,99 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #83bae7;
+  color: #000000;
+}
+
+.text-pink {
+  color: pink;
+}
+
+.navbar {
+  background-color: #0088ff;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 1024px) {
+  .foto {
+    margin-top: 1.5%;
+  }
+
+  .foto img {
+    border-radius: 50%;
+    width: 17.5%;
+  }
+
+  .teks1 {
+    margin-right: 20%;
+    margin-left: 20%;
+    text-align: justify;
+  }
+
+  .tombol {
+    margin-top: 1.5%;
+    display: inline-block;
+    border: 2px solid #000;
+    border-radius: 50px;
+    padding: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    opacity: 0.7;
+  }
+
+  .tombol img {
+    margin-right: 1%;
+    max-width: 5%;
+    height: auto;
+  }
+
+  .tombol:hover {
+    background-color: #ccc;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .foto {
+    margin-top: 5%;
+  }
+
+  .foto img {
+    border-radius: 50%;
+    width: 50%;
+  }
+
+  .teks1 {
+    margin-right: 5%;
+    margin-left: 5%;
+    text-align: justify;
+  }
+
+  .tombol {
+    margin-top: 1.5%;
+    display: inline-block;
+    border: 2px solid #000;
+    border-radius: 50px;
+    padding: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    opacity: 0.7;
+  }
+
+  .tombol img {
+    margin-right: 1%;
+    max-width: 5%;
+    height: auto;
+  }
+
+  .tombol:hover {
+    background-color: #ccc;
+    opacity: 1;
+  }
+}

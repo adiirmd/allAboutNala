@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BAHAGIA SELALU NALAAAAA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="stylesheet" href="msg.css" />
+  </head>
+  <body>
+    <div class="modal fade text-dark" id="myPopup" tabindex="-1" aria-labelledby="myPopupLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" id="mkonten">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myModalLabel">HALOOO</h5>
+          </div>
+          <div class="modal-body">Selamat Ulang Tahun Nalaaa</div>
+          <div class="modal-footer">
+            <button onclick="playAudio()" type="button" class="btn btn-danger" data-bs-dismiss="modal">OKAYYY</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="typed-text" id="textToAnimate" style="display: none"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script>
+      function playAudio() {
+        var audio = new Audio("../lagu/loveU.mp3");
+        audio.play();
+      }
+      function showTextToAnimate() {
+        document.getElementById("textToAnimate").style.display = "block";
+        const text =
+          "ALOOOO!!!!! HAPPY BIRTHDAY NALAAA, semoga di umur yang sekarang ini lebih dewasa lagi, jadi pribadi yang lebih baik, jadi anak sholihah, makin nurut dan sayang sama ortu, jangan tinggalin 5 waktunya yaa hehehe, jaga kesehatan nya, jangan suka begadang yaa gabaik kalo keseringan, kalo hari kamu lagi buruk cerita ke aku aja pasti aku dengerin kokk, i'll never judge u, ur heart is safe here, dan kalo kamu butuh apa apa jangan pernah sungkan sama aku, pasti aku bantu kok. semoga semua rencana dan keinginan kamu di kabulkan dan di segerakan Allah ya. Maaf aku belum bisa kasih apa apa, semoga kamu sehat selalu, bahagia selalu, di kelilingi hal hal baik setiap harinya, semoga kamu selalu dalam lindungan Allah. HAPPY BIRTHDAY NADIRA DWI LARASATIIII 🥳🤍";
+        const textContainer = document.getElementById("textToAnimate");
+        let index = 0;
+        const intervalId = setInterval(function () {
+          if (index <= text.length) {
+            textContainer.textContent = text.substr(0, index);
+            index++;
+          } else {
+            clearInterval(intervalId);
+          }
+        }, 126);
+        textContainer.style.whiteSpace = "pre-wrap";
+      }
+      document.getElementById("myPopup").addEventListener("hidden.bs.modal", function () {
+        showTextToAnimate();
+      });
+      window.onload = function () {
+        let myModal = new bootstrap.Modal(document.getElementById("myPopup"), { backdrop: "static", keyboard: false });
+        myModal.show();
+      };
+    </script>
+  </body>
+</html>
