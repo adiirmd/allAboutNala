@@ -19,7 +19,7 @@ body {
   left: -30px;
   right: -30px;
   bottom: -30px;
-  background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.8) 100%), url("../photos/bg.jpg  ");
+  background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.8) 100%), url("../photos/bg.jpg");
   background-size: cover;
   background-position: center;
   filter: blur(6px);
