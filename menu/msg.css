@@ -12,30 +12,48 @@ body {
   z-index: 1;
 }
 
-html::before {
+.background::before {
   content: "";
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.8) 100%), url("../photos/bg.jpg");
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.8) 100%), url("../photos/bg.jpg  ");
   background-size: cover;
   background-position: center;
   filter: blur(6px);
-  z-index: 0;
+  z-index: -1;
 }
 
-.blur-bg {
-  width: 20%;
-  position: relative;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  overflow: hidden;
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../photos/bg.jpg");
+  background-size: cover;
+  filter: blur(8px);
 }
 
 @media screen and (max-width: 576px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .blur-bg {
+    width: 20%;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+  }
+
   body.modal-open .mainContent {
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
